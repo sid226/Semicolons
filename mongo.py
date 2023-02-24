@@ -34,8 +34,12 @@ def create_user():
         client = MongoClient(uri)
         db = client[db_name]
 
+        user = db.users.find_one({'username': username})
+        if user:
+            return jsonify({"message":"Username already exists"})
+
         # Insert the new user into the "users" collection
-        if (password == rpassword):
+        if (password == rpassword): #check to compare password and confirm password.
             db.users.insert_one({
             'username': username,
             'firstname': firstname,
