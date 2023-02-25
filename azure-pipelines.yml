@@ -1,9 +1,9 @@
- trigger:
+trigger:
     - main
     
     pool:
       name: local
-  strategy:
+    strategy:
     # default deployment strategy, more coming...
     runOnce:
       deploy:
