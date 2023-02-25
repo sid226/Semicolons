@@ -1,4 +1,4 @@
-pool:
+enviroment:
   name: ubuntu    # your job runs on an agent in this pool
   
 steps:
