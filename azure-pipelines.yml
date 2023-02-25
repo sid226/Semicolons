@@ -1,7 +1,8 @@
-jobs:
-  # track deployments on the environment
-- deployment: ubuntu
-  environment: 'ubuntu'
+ trigger:
+    - main
+    
+    pool:
+      name: local
   strategy:
     # default deployment strategy, more coming...
     runOnce:
