@@ -1,7 +1,4 @@
-trigger: main # Disable CI triggers.
-environment: ubuntu
-strategy:                 # deployment strategy
-  runOnce:              # default strategy
-    deploy:
-      steps:
-      - script: echo Hello world
+pool:
+  vmImage: 'ubuntu-latest'
+steps:
+- bash: echo "Hello world"
