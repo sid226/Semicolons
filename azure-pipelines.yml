@@ -1,4 +1,7 @@
-pool:
-  vmImage: 'ubuntu-latest'
-steps:
-- bash: echo "Hello world"
+- deployment: string        # instead of job keyword, use deployment keyword
+  environment: ubuntu
+  strategy:
+    runOnce:
+      deploy:
+        steps:
+        - script: echo Hi!
