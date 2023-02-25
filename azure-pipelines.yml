@@ -1,5 +1,10 @@
-enviroment:
-  name: ubuntu    # your job runs on an agent in this pool
-  
-steps:
-- script: echo hello world
+jobs:
+  # track deployments on the environment
+- deployment: ubuntu
+  environment: 'ubuntu'
+  strategy:
+    # default deployment strategy, more coming...
+    runOnce:
+      deploy:
+        steps:
+        - script: echo my first deployment
